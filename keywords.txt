@@ -1,0 +1,2 @@
+Bitcraze_PMW3901	KEYWORD1
+readMotionCount	KEYWORD2
