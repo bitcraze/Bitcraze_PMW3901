@@ -12,7 +12,7 @@ The library is using the standard SPI library, the sensor MOSI, MISO and SCK sho
 
 Look at the [flow](examples/flow/flow.ino) example for basic usage.
 
-You can initialize a sensor by passing the chip select pin number:
+You can create a sensor by passing the chip select pin number:
 
 ``` C++
 // Using digital pin 10 for chip select
