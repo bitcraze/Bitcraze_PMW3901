@@ -1,2 +1,4 @@
 Bitcraze_PMW3901	KEYWORD1
 readMotionCount	KEYWORD2
+enableFrameBuffer KEYWORD2
+readFrameBuffer KEYWORD2 
