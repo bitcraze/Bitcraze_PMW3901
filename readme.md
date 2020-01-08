@@ -35,6 +35,14 @@ As soon as it is initialized, the sensor will start accumulating motion count. C
   flow.readMotionCount(&deltaX, &deltaY);
 ```
 
+Alternatively, to use the framebuffer system to use it as a camera of sorts you will need to do a bit more. After the *begin* function, call the *enableFrameBuffer* function to switch modes, then in your loop call *readFrameBuffer* while passing it a 35*35 array to dump pixels into. 
+
+``` C++
+  // Get pixels from framebuffer into an array
+  flow.readFrameBuffer(int *FBuffer);
+```
+
+
 ## Output interpretation
 
 The sensor outputs unitless ticks that corresponds to the amount of movement that has been observed in front of the sensor. These ticks can be converted to a distance if we know the distance to the tracked surface and we assume the tracked surface is flat.
