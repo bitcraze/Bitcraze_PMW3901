@@ -101,7 +101,7 @@ void Bitcraze_PMW3901::enableFrameBuffer()
   delayMicroseconds(50);
 }
 
-void Bitcraze_PMW3901::readFrameBuffer(int *FBuffer)
+void Bitcraze_PMW3901::readFrameBuffer(char *FBuffer)
 {
   int count = 0;
   uint8_t a; //temp value for reading register

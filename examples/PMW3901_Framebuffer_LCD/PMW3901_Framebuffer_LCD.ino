@@ -13,7 +13,7 @@ int PixelScale = 3;
 
 // Using digital pin 10 for chip select
 Bitcraze_PMW3901 flow(10);
-int frame[35*35]; //array to hold the framebuffer
+char frame[35*35]; //array to hold the framebuffer
 
 const PROGMEM uint16_t ironhot[] =  
 {0x0000,0x0000,0x0000,0x0000,0x0000,0x0020,0x0020,
