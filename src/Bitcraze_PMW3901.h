@@ -37,6 +37,8 @@ public:
   void enableFrameBuffer();
   void readFrameBuffer(char *FBuffer);
 
+  void setLed(bool ledOn);
+
 private:
   uint8_t _cs;
 

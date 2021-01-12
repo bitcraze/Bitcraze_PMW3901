@@ -265,3 +265,11 @@ void Bitcraze_PMW3901::initRegisters()
   registerWrite(0x5A, 0x50);
   registerWrite(0x40, 0x80);
 }
+
+void Bitcraze_PMW3901::setLed(bool ledOn)
+{
+  delay(200);
+  registerWrite(0x7f, 0x14);
+  registerWrite(0x6f, ledOn ? 0x1c : 0x00);
+  registerWrite(0x7f, 0x00);
+}
