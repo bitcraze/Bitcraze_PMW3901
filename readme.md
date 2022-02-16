@@ -48,3 +48,7 @@ Alternatively, to use the framebuffer system to use it as a camera of sorts you 
 The sensor outputs unitless ticks that corresponds to the amount of movement that has been observed in front of the sensor. These ticks can be converted to a distance if we know the distance to the tracked surface and we assume the tracked surface is flat.
 
 Parameters of the PMW3901 sensor have been devised experimentally in order to implement it in the Crazyflie firmware. The measurement equation are described in  [Marcus Greiff's Master thesis](http://lup.lub.lu.se/luur/download?func=downloadFile&recordOId=8905295&fileOId=8905299) section 6.5. The implementation is part or the [Crazyflie kalman filter](https://github.com/bitcraze/crazyflie-firmware/blob/6308ff47ff4d4691f9b7f6f991564244c76d7910/src/modules/src/estimator_kalman.c#L1034-L1098).
+
+## Contribute
+Go to the [contribute page](https://www.bitcraze.io/contribute/) on our website to learn more.
+
