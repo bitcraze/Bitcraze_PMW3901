@@ -24,6 +24,9 @@
 
 #include <SPI.h>
 
+#define CHIP_ID         0x49  // 01001001
+#define CHIP_ID_INVERSE 0xB6  // 10110110
+
 Bitcraze_PMW3901::Bitcraze_PMW3901(uint8_t cspin)
   : _cs(cspin)
 { }
@@ -51,7 +54,9 @@ boolean Bitcraze_PMW3901::begin(void) {
   uint8_t chipId = registerRead(0x00);
   uint8_t dIpihc = registerRead(0x5F);
 
-  if (chipId != 0x49 && dIpihc != 0xB8) return false;
+  if (chipId != CHIP_ID || dIpihc != CHIP_ID_INVERSE) {
+    return false;
+  }
 
   // Reading the motion registers one time
   registerRead(0x02);
